@@ -1,2 +1,2 @@
-FLASK_ENV=develpoment
-FLASK_APP=hello.py
+FLASK_APP=hello 
+FLASK_ENV=development
