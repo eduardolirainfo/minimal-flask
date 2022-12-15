@@ -1,1 +1,9 @@
+{% extends "base.html" %}
+{% block content %}
+{% if name %}
 <h1>Hello, {{name|capitalize}}!</h1>
+<h2>How are you doing today?</h2>
+{% else %}
+<h1>Hello There!</h1>
+{% endif %}
+{% endblock %}

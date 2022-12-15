@@ -7,7 +7,8 @@ app.secret_key = 'development key'
 
 @app.route("/")
 def hello():
-    return render_template('index.html')
+    fruits = ['apple', 'banana', 'orange']
+    return render_template('index.html', fruits=fruits)
 
 
 @app.route("/user/<name>")
