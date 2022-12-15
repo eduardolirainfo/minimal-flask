@@ -5,13 +5,20 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hello</title>
     <link rel="stylesheet" href="{{ url_for('static',filename='css/main.css') }}">
+    {% block head %}
+    <title>{% block title %}{% endblock %} Hello</title>
 </head>
+{% endblock %}
 
 <body>
-
-    {% block content %}
+    {% block quote %}
+    <h1>Quote of the day</h1>
+    <p>“The only way to do great work is to love what you do. If you haven’t found it yet, keep looking. Don’t settle.
+        As with all matters of the heart, you’ll know when you find it.”</p>
+    <p>Steve Jobs</p>
+    {% endblock %}
+    {% block body %}
     {% endblock %}
 
 </body>
