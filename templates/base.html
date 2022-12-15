@@ -1,26 +1,30 @@
-<!DOCTYPE html>
-<html lang="pt_BR">
+{% extends "bootstrap/base.html" %}
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{ url_for('static',filename='css/main.css') }}">
-    {% block head %}
-    <title>{% block title %}{% endblock %} Hello</title>
-</head>
+{% block title %}My Base Template{% endblock %}
+
+{% block navbar %}
+<div class="navbar navbar-inverse" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">MyApp</a>
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li><a href="/">Home</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
 {% endblock %}
 
-<body>
-    {% block quote %}
-    <h1>Quote of the day</h1>
-    <p>“The only way to do great work is to love what you do. If you haven’t found it yet, keep looking. Don’t settle.
-        As with all matters of the heart, you’ll know when you find it.”</p>
-    <p>Steve Jobs</p>
-    {% endblock %}
-    {% block body %}
-    {% endblock %}
-
-</body>
-
-</html>
+{% block content %}
+<div class="container">
+    {% block page_content %}{% endblock %}
+</div>
+{% endblock %}

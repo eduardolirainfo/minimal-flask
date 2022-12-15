@@ -1,8 +1,11 @@
 from flask import Flask, render_template
+from flask_bootstrap import Bootstrap
 
 app = Flask(__name__)
 app.debug = True
 app.secret_key = 'development key'
+
+bootstrap = Bootstrap(app)
 
 
 @app.route("/")
