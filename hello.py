@@ -28,11 +28,6 @@ def hello():
 def user(name):
 
     return render_template('user.html', name=name)
-    # return "<h1>Hello, %s!</h1>" % name
-    # or
-    # f"<h1>Hello, {name}!</h1>"
-    # or
-    # return "<h1>Hello, {}!</h1>".format(name)
 
 
 if __name__ == "__main__":
